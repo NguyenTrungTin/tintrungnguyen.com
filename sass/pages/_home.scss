@@ -1,66 +1,74 @@
 .main {
-	background-image: linear-gradient(
-			to right top,
-			rgba($color-background-dark, 0.65) 50%,
-			rgba($color-background-medium, 0.65) 100%
-		),
-		url('../../img/Universe.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    background-image: linear-gradient(
+            to right top,
+            rgba($color-background-dark, 0.65) 50%,
+            rgba($color-background-medium, 0.65) 100%
+        ),
+        url('../../img/Universe.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	&__avatar-box {
-	}
+    &__avatar-box {
+    }
 
-	&__avatar {
-	}
+    &__avatar {
+    }
 
-	&__heading-box {
-		color: $color-white;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+    &__heading-box {
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-	&__heading--primary {
-		font-family: inherit;
-		font-size: 8rem;
-	}
+    &__heading--primary {
+        font-family: inherit;
+        font-size: 8rem;
 
-	&__heading--secondary {
-		font-family: 'Space Mono';
-		font-size: 3rem;
-		color: $color-primary-light;
-	}
+        @include respond(phone) {
+            font-size: 6rem;
+        }
+    }
 
-	&__heading-icon {
-	}
+    &__heading--secondary {
+        font-family: 'Space Mono';
+        font-size: 3rem;
+        color: $color-primary-light;
 
-	.icon-box {
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+    }
 
-	.icon {
-		color: white;
-		padding: 0.5rem;
-		margin: 1rem;
-		animation: all 0.2s;
+    &__heading-icon {
+    }
 
-		&:hover {
-			transform: scale(1.2) translateY(-0.1rem);
-		}
-	}
+    .icon-box {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-	.icon a:link,
-	.icon a:visited {
-		text-decoration: none;
-		color: $color-white;
-	}
+    .icon {
+        color: white;
+        padding: 0.5rem;
+        margin: 1rem;
+        animation: all 0.2s;
+
+        &:hover {
+            transform: scale(1.2) translateY(-0.1rem);
+        }
+    }
+
+    .icon a:link,
+    .icon a:visited {
+        text-decoration: none;
+        color: $color-white;
+    }
 }
